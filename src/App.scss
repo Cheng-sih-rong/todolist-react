@@ -1,0 +1,139 @@
+html{
+  background-color: rgb(212, 201, 186);
+}
+
+//App.js 置中
+.App {
+  width: 100vw;
+  margin-inline:auto ;
+ }
+ .container{
+   margin-inline: auto;
+   width: 700px;
+
+   .list-wrapper{
+    margin-top: 30px;
+  }
+ }
+ 
+.center{
+  align-items: center;
+}
+
+.input{
+  input{
+      margin-right: 10px;
+      font-size: 20px;
+      outline:none;
+      width: 600px;
+  }
+}
+
+
+.wrap{
+  flex-direction: column;
+}
+.flex{
+  display: flex;
+}
+.marign-right-10{
+  margin-right: 10px;
+}
+
+.margin-bottom-10{
+  margin-bottom: 10px;
+}
+ 
+
+.content-edit{
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  .title{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+}
+
+.item-wrap{
+  p{
+      width: 600px;
+  }
+  
+}
+
+
+//Header
+.flex{
+  display: flex;
+}
+
+.flex-between{
+  display: flex;
+  justify-content:space-between;
+}
+
+.to-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gap-10{
+  gap:10px;
+  justify-content: space-around;
+}
+
+.header{
+  margin-inline:auto ;
+  padding-inline:20px ;
+  margin-bottom: 30px;
+  align-items: center;
+  background-color: rgb(113, 95, 78);
+  width: 700px;
+  color: #fff;
+
+  .gap-20{
+      gap:20px;
+      justify-content: space-around;
+  }
+  
+  li{
+      list-style: none;
+      width: max-content;
+      font-weight:bolder;
+      cursor: pointer;
+  }
+  .nav{
+      a{
+          color: #fff;
+          text-decoration: none;
+          font-weight: normal;
+      }
+      .active{
+          text-decoration:underline;
+          font-weight: bolder;
+      }
+  }
+
+}
+
+//Button
+.button{
+  button{
+      width: max-content;
+      padding-inline:20px ;
+      padding-block:10px ;
+      border-radius:5px;
+      border: none;
+      cursor: pointer;
+      background-color: rgb(113, 95, 78);
+      color: #fff;
+      &:hover{
+          opacity: 0.8;
+      }
+  }
+}
+
+
