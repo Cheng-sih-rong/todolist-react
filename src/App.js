@@ -1,16 +1,22 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import './App.scss';
 import Header from './components/Header';
 import Button from './components/Button';
 import List from './components/List';
 
+const list = window.localStorage.getItem('list') ? JSON.parse(window.localStorage.getItem('list')) : []
 
 /*元件App*/
 function App() {
 
   //儲存資料內容
-  const [todoList, setTodoList] = useState([])
+  const [todoList, setTodoList] = useState(list)
+  // window.localStorage.setItem('list', todoList.JSON.stringfy())
+  useEffect(() => {
+    window.localStorage.setItem('list', JSON.stringify(todoList))
+  }, [todoList])
+
 
   /*建立輸入元件input*/
   function Input(prop) {
@@ -87,7 +93,7 @@ function App() {
       <div className="container">
         <Input />
         <div className="list-wrapper">
-          <List show={changeFun} fuc={{ deleteItem, doneItem }} />
+          <List show={location.pathname === '/all' ? todoList : changeFun} fuc={{ deleteItem, doneItem }} />
         </div>
       </div>
     </div>
